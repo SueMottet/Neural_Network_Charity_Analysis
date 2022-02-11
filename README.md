@@ -1,5 +1,5 @@
 # Neural Network Charity Analysis
-This data analysis applies machine learning and a neural network also known as a deep learning model to create a binary classifier that is capable of predicting whether applicants will be successful if funded by a charitable organization
+This data analysis applies machine learning and a neural network also known as a deep learning model to create a binary classifier that is capable of predicting whether applicants will be successful if funded by a charitable organization.
 ## Overview
 
 A CSV containing more than 34,000 organizations that have received funding from the charitable organization over the years was used. Within this dataset, there are a number of columns that capture metadata about each organization.
@@ -49,10 +49,10 @@ The variables consider neither targets nor features that were removed from the i
 * NAME — Identification columns
 
 ### Compiling, Training, and Evaluating the Model
-* Initially the deep learning model had 2 hidden layers with 75 neurons in the first layer and 30 in the second were used and achieved a testing accuracy of 73%
-* The first attempt at optimization added the NAME data and bundled that data into an "Other" category where NAME counts  were < 300, kept the same 2 hidden layers with 30 neurons in the first layer and 10 in the second hidden layer achieving an accuracy of 74%
+* Initially the deep learning model did not include the NAME data, bundled APPLICATION_TYPE into an "Other" category where APPLICATION_TYPE counts were < 500, bundled CLASSIFICATION into an "Other" category where CLASSIFICATION counts  were < 500, had 2 hidden layers with 75 neurons in the first layer and 30 in the second, ran with 25 epochs and achieved a testing accuracy of 73%.
+* The first attempt at optimization added the NAME data and bundled that data into an "Other" category where NAME counts  were < 300, bundled APPLICATION_TYPE into an "Other" category where APPLICATION_TYPE counts were < 500, , bundled CLASSIFICATION into an "Other" category where CLASSIFICATION counts  were < 500, kept the same 2 hidden layers with 30 neurons in the first layer and 10 in the second hidden layer, ran with 25 epochs achieving an accuracy of 74%
 * The second attempt at optimization added the NAME data and bundled that data into an "Other" category where NAME counts  were < 200, kept the same 2 hidden layers with 30 neurons in the first layer and 10 in the second hidden layer achieving an accuracy of 75%
-* The third attempt at optimization added the NAME data and bundled that data into an "Other" category where NAME counts  were < 200, kept the same 2 hidden layers with 30 neurons in the first layer and 10 in the second hidden layer achieving an accuracy of 75%
+* The third attempt at optimization added the NAME data and bundled that data into an "Other" category where NAME counts  were < 50, bundled APPLICATION_TYPE into an "Other" category where APPLICATION_TYPE counts were < 50, bundled CLASSIFICATION into an "Other" category where CLASSIFICATION counts  were < 50, kept the same 2 hidden layers and changed to 40 neurons in the first layer and 5 in the second hidden layer, ran with 25 epochs achieving an accuracy of 76%
 The analysis was able to achieve the target model performance of 75%
 * Bringing NAME into the analysis, encoding it, and adjusting the bundling of the NAME data increased model performance
 
